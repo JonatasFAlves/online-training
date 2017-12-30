@@ -1,0 +1,122 @@
+/**
+ * TABLE OF CONTENTS 
+ *
+ * GLOBAL ..................... Global settings.
+ *
+ * CONTAINER .................. In here we define the outer div.
+ * 
+ * CONTENT .................... Responsible for the written content.
+ *
+ * MEDIA ...................... Media queries for bigger screens.
+ *
+ */
+
+/*-------------------------------*\
+   #GLOBAL
+\*-------------------------------*/
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+
+/*-------------------------------*\
+   #CONTAINER
+\*-------------------------------*/
+
+.container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+}
+
+    .container img {
+        width: 120%;
+    }
+
+
+
+
+
+/*-------------------------------*\
+   #CONTENT
+\*-------------------------------*/
+
+.content {
+    margin: 12px auto;
+    text-align: center;
+}
+
+    .content button {
+        background-color: rgb(52, 168, 207);
+        color: white;
+        width: 60%;
+        height: 30%;
+        border: none;
+        border-radius: 5px;
+    }
+
+
+
+
+
+/*-------------------------------*\
+   #MEDIA
+\*-------------------------------*/
+
+/* Mobile first page. Now we are creating the page for bigger screens */
+@media (min-width: 600px) {
+    .container {
+        flex-direction: row;
+        padding: 10%;
+    }
+
+    .container img {
+        width: 150%;
+    }
+    
+    .content {
+        margin: 0;
+        text-align: left;
+    }
+
+    .container button {
+        width: 130px;
+        height: 30px;
+    }
+}
+
+@media (min-width: 700px) {
+    .container img {
+        width: 50%;
+    }
+
+    .content {
+        width: 40%;
+    }
+
+    .container button {
+        width: 150px;
+        height: 35px;
+    }
+}
+
+@media (min-width: 900px) {
+    .container{
+        padding: 8%;
+    }
+
+    .container img {
+        width: 45%;
+    }
+
+    .content {
+        width: 40%;
+        font-size: 120%;
+    }
+}
